@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>100% RAPFR</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/assets/disque.ico" />
+        <!-- Bootstrap icons-->
+        <link href="static/css/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">100% RAP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="affRappeurs">Rappeurs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="affGroupes">Groupes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="affMusiques">Musiques</a></li>
+                        <li class="nav-item"><a class="nav-link" href="affConcerts">Concerts</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Covoiturage</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="affCovoiturage">Les covoiturages</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="affProposer">Proposer un covoiturage</a></li>
+                                <li><a class="dropdown-item" href="affAnnonces">S'inscrire à un covoiturage</a></li>
+                                <li><a class="dropdown-item" href="pageInscrit">Liste des inscrits</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>CRUD</strong></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="">CRUD</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="pageAjouter"><strong>Ajouter</strong></a></li>
+                                <li><a class="dropdown-item" href="pageSupprimer">Supprimer</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Rajoutez des données au site</h1>
+                    <p claslead fw-normal text-white-50 mb-0">Mettez en ligne des rappeurs, musiques, groupes ou concerts que vous trouvez intéressant !</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="static/assets/rappeur1.png" alt="..." width="300px" height="150px"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Ajouter un rappeur</h5>
+                                </div>
+                            </div>
+                            <form action="addRappeur">
+                                <label for="NomScène">Nom de scène :</label>
+                                <input type="text" id="NomScène" name="NomScène" required><br><br>
+                                
+                                <label for="Nom">Nom :</label>
+                                <input type="text" id="Nom" name="Nom" required><br><br>
+                                
+                                <label for="Prénom">Prénom :</label>
+                                <input type="text" id="Prénom" name="Prénom" required><br><br>
+
+                                <label for="Date">Date de naissance :</label>
+                                <input type="date" id="Date" name="Date" required><br><br>
+
+                                <label for="LienInsta">Lien instagram :</label>
+                                <input type="text" id="LienInsta" name="LienInsta" required><br><br>
+                                
+                                <label for="DateAlbum">Date du premier album :</label>
+                                <input type="date" id="DateAlbum" name="DateAlbum" required><br><br>
+
+                                <label for="NomGroupe">Nom du groupe ou 'Aucun':</label>
+                                <input type="text" id="NomGroupe" name="NomGroupe" required><br><br>
+
+                                <input type="submit" value="AJOUTER">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="static/assets/screw.jpeg" alt="..." width="300px" height="150px"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Ajouter un groupe</h5>
+                                </div>
+                            </div>
+                            <form action="addGroupe">
+                                <label for="Nom">Nom du groupe :</label>
+                                <input type="text" id="Nom" name="Nom" required><br><br>
+
+                                <label for="DateF">Date de formation :</label>
+                                <input type="date" id="DateF" name="DateF" required><br><br>
+
+                                <label for="DateA">Date du premier album :</label>
+                                <input type="date" id="DateA" name="DateA" required><br><br>
+
+                                <input type="submit" value="AJOUTER">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="static/assets/musiques3.jpg" alt="..." width="300px" height="150px"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Ajouter une musique</h5>
+                                </div>
+                            </div>
+                            <form action="addMusique">
+                                <label for="Nom">Nom :</label>
+                                <input type="text" id="Nom" name="Nom" required><br><br>
+
+                                <label for="Auteur">Auteur :</label>
+                                <input type="text" id="Auteur" name="Auteur" required><br><br>
+
+                                <label for="Durée">Durée :</label>
+                                <input type="text" id="Durée" name="Durée" required><br><br>
+
+                                <label for="Date">Date de sortie :</label>
+                                <input type="date" id="Date" name="Date" required><br><br>
+
+                                <label for="Genre">Genre :</label>
+                                <input type="text" id="Genre" name="Genre" required><br><br>
+
+                                <input type="submit" value="AJOUTER">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="static/assets/concerts1.jpeg" alt="..." width="300px" height="150px"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Ajouter un concert</h5>
+                                </div>
+                            </div>
+                            <form action="addConcert">
+                                <label for="Chanteur">Chanteur :</label>
+                                <input type="text" id="Chanteur" name="Chanteur" required><br><br>
+
+                                <label for="Lieu">Lieu :</label>
+                                <input type="text" id="Lieu" name="Lieu" required><br><br>
+
+                                <label for="Date">Date :</label>
+                                <input type="date" id="Date" name="Date" required><br><br>
+
+                                <label for="Heure">Heure :</label>
+                                <input type="text" id="Heure" name="Heure" required><br><br>
+                                
+                                <label for="Durée">Durée :</label>
+                                <input type="int" id="Durée" name="Durée" required><br><br>
+
+                                <label for="Prix">Prix :</label>
+                                <input type="text" id="Prix" name="Prix" required><br><br>
+
+                                <input type="submit" value="AJOUTER">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Matteo SCHMIDT &copy; 100% RAPFR</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
